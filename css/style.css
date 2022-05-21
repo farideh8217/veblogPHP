@@ -26,11 +26,148 @@ a.nav-link:hover{
 input.input{
     width: 50%;
     display: inline;
-    margin-right: 208px;
     border-radius: 0px 5px 5px 0px;
 }
-input .sub{
+input.sub{
     margin-right: -5px;
     border-radius: 5px 0px 0px 5px;
     color: #33ffff;
 }
+.head-image img{
+    border-radius: 10px;
+    transition: 0.6 all;
+    box-shadow:1px 1px 1px 1px rgb(150, 148, 148) ;
+}
+.head-image{
+    margin-top: 30px;
+}
+.head-image img:hover{
+    opacity: 0.4;
+    transition: 0.6 all;
+}
+.content-text{
+    margin-top:50px;
+    font-size: 10px;
+    padding: 20px 70px;
+    margin-bottom: 70px;
+    background-color: rgb(198,202,206);
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+.content-text a{
+    color: red;
+}
+a:hover{
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white !important;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right:0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  .mobile-search{
+      width: 92%;
+      display: inline;
+      border-radius: 0px 5px 5px 0px;
+      margin-right: -75px;
+  }
+  input.mobile{
+      width: 75%;
+      display: inline;
+      border-radius: 0px 5px 5px 0px;
+      margin-top: 20px;
+  }
+  .footer{
+      margin-top: 100px;
+  }
+  ul{
+      list-style-type: none;
+      font-size: 10px;
+  }

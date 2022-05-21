@@ -68,17 +68,116 @@
   </div>
 </nav>
 <div class="container">
-    <div class="search">
-    <form method="POST">
-        <input type="text" placeholder="دنبال چی میگردی" class="form-control input">
-        <input type="submit" value="جستجو" class="btn btn-info sub">
-    </form>
-    <div class="head-image">
-      <div class="col-12 col-lg-6">
-        <img src="image/2.jpg" alt="" width="100%">
+    <div class="d-none d-lg-block">
+      <div class="search">
+        <form method="POST">
+            <input type="text" placeholder="دنبال چی میگردی" class="form-control input">
+            <input type="submit" value="جستجو" class="btn btn-info sub">
+        </form>  
       </div>
     </div>
+    <div class="d-block d-lg-none">
+      <div class="mobile-search">
+        <form method="POST">
+            <input type="text" placeholder="دنبال چی میگردی" class="form-control mobile">
+            <input type="submit" value="جستجو" class="btn btn-info sub">
+        </form>  
+      </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="head-image">
+          <img src="image/2.jpg" width="100%">
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="head-image">
+          <img src="image/2.jpg" width="100%">
+        </div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="head-image">
+          <img src="image/2.jpg" width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="content-text">
+     <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزاره گیرد.</span>
+    <a href="">بیشتر...</a>
+    </div>
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="image/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="image/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="image/2.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="image/2.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>  
+</div>
+<div class="footer">
+  <p>لینک های مفید</p>
+  <ul>
+    <a href=""><li>درباره اکابلاگ</li></a>
+    <a href=""><li>سوپرمارکت اینترنتی اکالا</li></a>
+    <a href=""><li>کد تخفیف خرید از اکالا</li></a>
+  </ul>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
