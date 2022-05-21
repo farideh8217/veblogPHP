@@ -1,0 +1,36 @@
+@font-face{
+    font-family: IRANMarker;
+    src: url('../font/IRANMarker.ttf');
+}
+*{
+    font-family:IRANMarker ;
+}
+a.nav-link{
+    margin: 0px 10px;
+    color: #333 !important;
+    font-size: 12px;
+}
+.dropdown-menu.show{
+    border-bottom: 3px solid #33ffff;
+    border-radius: 5px 5px 0px 0px;
+}
+div.show > a{
+    font-size: 9px;
+}
+a.nav-link:hover{
+    border-bottom: 1px solid red;
+}
+.search{
+    margin-top: 50px;
+}
+input.input{
+    width: 50%;
+    display: inline;
+    margin-right: 208px;
+    border-radius: 0px 5px 5px 0px;
+}
+input .sub{
+    margin-right: -5px;
+    border-radius: 5px 0px 0px 5px;
+    color: #33ffff;
+}
