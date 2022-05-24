@@ -3,7 +3,8 @@
     src: url('../font/IRANMarker.ttf');
 }
 *{
-    font-family:IRANMarker ;
+    font-family:IRANMarker;
+    font-size: 20px;
 }
 a.nav-link{
     margin: 0px 10px;
@@ -191,15 +192,18 @@ a:hover{
   }
   .boxes span{
     opacity: 0.7;
+    font-size: 10px;
   }
   .boxes img{
     border-radius: 7px;
+    transition: 0.4s;
   }
   .boxes p{
     margin: 5px 0px;
   }
   .boxes img:hover{
-    margin-top: -10px;
+    opacity: 0.5;
+    transition: 0.4s;
   }
   h4#title{
     padding-bottom: 25px;
@@ -207,5 +211,36 @@ a:hover{
     display: inline-block;
   }
   .co-view svg{
-    margin-right: 10px;
+    margin-right: 5px;
   }
+  .content-text > span{/*///////////////////////////////////////*/
+    font-size: 20px;
+  }
+.blog{
+  border: 1px solid #333;
+  margin-top: 70px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.blog img{
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.blog h1{
+  font-size: 27px;
+}
+.writer{
+  margin-top: 32px;
+}
+.tags{
+  margin-top:30px;
+  border: 1px solid #222;
+  padding-bottom: 20px;
+}
+.tags a{
+  padding: 7px;
+  background-color: cadetblue;
+  color: #f2f2f2;
+  margin-right: 10px;
+  border-radius: 7px;
+}
