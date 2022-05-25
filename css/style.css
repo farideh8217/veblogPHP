@@ -234,7 +234,7 @@ a:hover{
 }
 .tags{
   margin-top:30px;
-  border: 1px solid #222;
+  padding: 20px;
   padding-bottom: 20px;
 }
 .tags a{
@@ -243,4 +243,28 @@ a:hover{
   color: #f2f2f2;
   margin-right: 10px;
   border-radius: 7px;
+}
+#tag{
+  margin-top: 20px;
+}
+.writer-info{
+  margin-top: 60px;
+  box-shadow: 2px 2px 1px 2px rgb(150, 148, 148);
+  padding: 30px;
+  border-radius: 10px;
+}
+.writer-info a{
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+.comment{
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px 2px rgb(150, 148, 148);
+  padding: 10px;
+}
+.user-comment{
+  box-shadow: 2px 2px 2px 2px rgb(150, 148, 148);
+  padding: 7px;
+  border-radius:5px;
 }
