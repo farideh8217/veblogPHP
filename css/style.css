@@ -268,3 +268,7 @@ a:hover{
   padding: 7px;
   border-radius:5px;
 }
+h1#welcome{
+  margin: 30px 0px;
+  text-align: center;
+}
