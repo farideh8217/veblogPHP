@@ -32,6 +32,7 @@ $date=jdate('Y/m/d');
             <th scope="col">تاریخ انتشار</th>
             <th scope="col">عکس مقاله</th>
             <th scope="col">نویسنده</th>
+            <th scope="col">عملیات</th>
             </tr>
         </thead>
         <tbody>
@@ -42,6 +43,7 @@ $date=jdate('Y/m/d');
                 <td><?= $bloginfo['date']?></td>
                 <td><img src="<?= $bloginfo['image']?>" alt="" height="100px"></td>
                 <td><?= $bloginfo['writer']?></td>
+                <td><a class="btn btn-danger" href="delete.php?id=<?= $bloginfo['id'] ?>">حذف</a> <a class="btn btn-warning" href="editblog.php?id=<?= $bloginfo['id'] ?>">ویرایش</a></td>
             </tr>
         <?php endforeach; ?>   
         </tbody>
