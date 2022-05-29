@@ -5,7 +5,7 @@ $id=$_GET['id'];
 $select=$conn->prepare("SELECT * FROM blogs WHERE id=?");
 $select->bindValue(1,$id);
 $select->execute();
-$blogs=$select->fetchAll(PDO::FETCH_ASSOC);
+$blog=$select->fetch(PDO::FETCH_ASSOC);
 
 $date=jdate('Y/m/d');
 
@@ -50,7 +50,7 @@ if(isset($_POST['sub'])){
         <h1 id="welcome">بخش ویرایش مقاله</h1>
         <?= $date ?>
         <form method="POST">
-            <?php foreach($blogs as $blog ): ?>
+         
                 <input name="title" type="text" placeholder="موضوع مقاله" class="form-control" value="<?=$blog['title'] ?>">
                 <script src="//cdn.ckeditor.com/4.19.0/full/ckeditor.js"></script>
                 <textarea name="editor1" id="editor1"><?=$blog['caption']?></textarea> 
@@ -65,7 +65,7 @@ if(isset($_POST['sub'])){
                 <input name="image" type="text" value="<?= $blog['image']?>"placeholder="لینک عکس" class="form-control">
                 <input name="tags" type="text" value="<?= $blog['tags']?>"placeholder="تگ ها" class="form-control">
                 <input name="sub" type="submit" class="btn btn-success" value="ثبت">
-            <?php endforeach; ?> 
+          
         </form>
     </div>
     

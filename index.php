@@ -21,26 +21,7 @@
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">خانه <span class="sr-only"></span></a>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          سبک زندگی
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">روانشناسی</a>
-          <a class="dropdown-item" href="#">ورزش</a>
-          <a class="dropdown-item" href="#">سلامت و زیبایی</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          آشپزی
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">فست فود</a>
-          <a class="dropdown-item" href="#">میوه</a>
-          <a class="dropdown-item" href="#">شیرینی</a>
-        </div>
-      </li>
+        
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           نبض بازار
@@ -65,6 +46,15 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">اکالا رنک</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.php">ثبت نام</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ورود</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">خروج</a>
       </li>
     </ul>
   </div>

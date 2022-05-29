@@ -21,8 +21,8 @@
           نویسندگان
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">افزودن نویسنده</a>
-          <a class="dropdown-item" href="#">مشاهده نویسنده</a>
+          <a class="dropdown-item" href="addwriter.php">افزودن نویسنده</a>
+          <a class="dropdown-item" href="writers.php">مشاهده نویسندگان</a>
         </div>
       </li>
       <li class="nav-item">
