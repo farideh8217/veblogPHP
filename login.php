@@ -1,21 +1,25 @@
 <?php
 include "database/db.php";
 
-if (isset($_POST["sub"],$_POST["name"],$_POST["email"],$_POST["pass"])) {
-    $name = trim($_POST["name"]);
-    $email = trim($_POST["email"]);
-    $password = trim($_POST["pass"]);
+if (isset($_POST["sub"],$_POST["email"],$_POST["pass"])) {
+    $email = $_POST["email"];
+    $password = $_POST["pass"];
 
-    if($name === "" && $email === "" && $password === "") {
-        $status = false;
-    }else {
-        $register = register($name,$email,$password);
-        $status = true;
+    $login = login($email,$password);
+
+    if ($email === "" || $password === "") {
+        echo "نام کاربری یا رمز عبور نباید خالی باشد";
+    }elseif($login !== null) {
+        $_SESSION["user"] = $login["id"];
+        header("Location: index.php");
+        exit();
+    } else {
+        echo "نام کاربری یا رمز عبور اشتباه است";
     }
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,23 +36,11 @@ if (isset($_POST["sub"],$_POST["name"],$_POST["email"],$_POST["pass"])) {
 <div class="container">
     <div class="register" style="text-align:center;">
         <form method="POST">
-            <h4>ثبت نام کنید</h4>
-            <input name="name" type="text" placeholder="نام ونام خانوادگی" class="form-control" required><br>
+            <h4>ورود به حساب کاربری</h4>
             <input name="email" type="email" placeholder="ایمیل" class="form-control" required><br>
             <input name="pass" type="password" placeholder="رمزعبور" class="form-control" required><br>
-            <input name="sub" type="submit" value="ثبت نام" class="btn btn-info form-control"><br>
+            <input name="sub" type="submit" value="ورود به حساب" class="btn btn-info form-control" required><br>
         </form>
-        <?php if(isset($status)) { ?>
-            <?php if($status === true) { ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo "اطلاعات با موفقیت ثبت شد" ?>
-                </div>
-            <?php }elseif($status === false){ ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo "وارد کردن نام و ایمیل و رمزعبور اجباری است" ?>
-                </div>
-            <?php } ?>
-        <?php } ?>
     </div>
 </div>
 </body>

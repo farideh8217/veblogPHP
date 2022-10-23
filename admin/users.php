@@ -6,7 +6,7 @@ if ($IsAuth === false) {
     Redirect("../login.php");
 }
 
-$writers = getwriter();
+$users = Get_User();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,30 +23,32 @@ $writers = getwriter();
 <body dir="rtl">
 <?php include "header.php"; ?>
 <div class="container">
-    <h1 id="welcome">مشاهده نویسندگان</h1>
-
+    <h1 id="welcome">کاربران وبسایت شما</h1>
+    <form action="" method="get">
     <table class="table">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">نام نویسنده</th>
-            <th scope="col">عکس نویسنده</th>
+            <th scope="col">نام کاربر</th>
+            <th scope="col">ایمیل کاربر</th>
+            <th scope="col">رمزعبور</th>
             <th scope="col">عملیات</th>
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($writers as $writer) { ?>
-            <tr>
-                <th scope="row"><?= $writer["writer"] ?></th>
-                <td><?= $writer["username"] ?></td>
-                <td><img src="file/<?= $writer["image"] ?>" alt="" height="100px"></td>
-                <td><a class="btn btn-danger" href="deletewriter.php?writer=<?= $writer['writer'] ?>">حذف</a> <a
-                            class="btn btn-warning" href="editwriter.php?writer=<?= $writer['writer'] ?>">ویرایش</a>
-                </td>
-            </tr>
+        <?php foreach ($users as $user_item) {?>
+        <tr>
+            <th scope="row"><?= $user_item["id"] ?></th>
+            <td><?= $user_item["name"] ?></td>
+            <td><?= $user_item["email"] ?></td>
+            <td><?= $user_item["pass"] ?></td>
+            <td><a class="btn btn-danger" href="delete.php?id=<?= $user_item['id'] ?>">حذف</a> <a class="btn btn-warning" href="editblog.php?id=<?= $user_item['id'] ?>">ویرایش</a>
+            </td>
+        </tr>
         <?php } ?>
         </tbody>
     </table>
+    </form>
 </div>
 
 <footer>
